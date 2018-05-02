@@ -36,5 +36,5 @@ deploy:
     tags: true
     branch:
     - master
-    - feature-use-custom-python-base-image
+    - feature-baisc-taks-resources
     - "/(\\d+\\.)?(\\d+\\.)?(\\*|\\d+)$/"
