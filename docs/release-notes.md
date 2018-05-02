@@ -1,8 +1,13 @@
 # Release Notes
 
+
+
 ## 0.0.2-DEV
 
 - Install packages: django-extensions, django_fe_core and django_fe_jwt
+- Add badges to the README.md
+
+
 
 ## 0.0.1
 
