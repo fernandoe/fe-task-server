@@ -13,5 +13,8 @@ runserver:
 migrate:
 	cd src; python manage.py migrate
 
+test:
+	cd src; pytest -s
+
 travis.test:
-	true
+	test
