@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django_extensions',
 
     'fe_core',
+    'fe_task',
 ]
 
 MIDDLEWARE = [
