@@ -17,4 +17,4 @@ test:
 	cd src; pytest -s
 
 travis.test:
-	test
+	docker run --rm -it '${TRAVIS_REPO_SLUG}:${TAG}' pytest -s
