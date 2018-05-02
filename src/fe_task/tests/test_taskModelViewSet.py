@@ -35,3 +35,8 @@ class TestTaskModelViewSet(APITestCase):
         assert task.description == data['description']
         assert task.entity == self.entity
         assert task.user == self.user
+
+    def test_anonymous_user(self):
+        self.client.logout()
+        response = self.client.post(reverse('task-list'), EXAMPLE_DATA)
+        assert status.HTTP_403_FORBIDDEN == response.status_code
