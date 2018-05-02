@@ -6,4 +6,5 @@ from .models import Task
 class TaskSerializer(serializers.ModelSerializer):
     class Meta:
         model = Task
-        fields = ('name', 'description')
+        read_only_fields = ('uuid',)
+        fields = ('uuid', 'created_at', 'updated_at', 'name', 'description')

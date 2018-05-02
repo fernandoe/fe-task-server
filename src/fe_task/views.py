@@ -2,7 +2,6 @@ from rest_framework import viewsets
 
 from .models import Task
 from .serializers import TaskSerializer
-from fe_core.factories import UserFactory, EntityFactory
 
 
 class TaskModelViewSet(viewsets.ModelViewSet):
@@ -10,6 +9,6 @@ class TaskModelViewSet(viewsets.ModelViewSet):
     serializer_class = TaskSerializer
 
     def perform_create(self, serializer):
-        user = UserFactory()
-        entity = EntityFactory()
+        user = self.request.user
+        entity = user.entity
         serializer.save(user=user, entity=entity)
