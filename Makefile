@@ -13,5 +13,11 @@ runserver:
 migrate:
 	cd src; python manage.py migrate
 
+makemigrations:
+	cd src; python manage.py makemigrations
+
+test:
+	cd src; pytest -s
+
 travis.test:
-	true
+	docker run --rm -it '${TRAVIS_REPO_SLUG}:${TAG}' pytest -s
