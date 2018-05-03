@@ -2,7 +2,7 @@
 
 
 
-## 0.0.2-DEV
+## 0.0.2
 
 - Install packages: django-extensions, django_fe_core and django_fe_jwt
 - Add badges to the README.md
