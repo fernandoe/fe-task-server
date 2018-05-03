@@ -13,6 +13,9 @@ runserver:
 migrate:
 	cd src; python manage.py migrate
 
+makemigrations:
+	cd src; python manage.py makemigrations
+
 test:
 	cd src; pytest -s
 

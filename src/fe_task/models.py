@@ -10,3 +10,7 @@ class Task(UUIDModel):
     entity = models.ForeignKey(Entity, on_delete=models.CASCADE, null=True, blank=True)
     name = models.CharField(max_length=100)
     description = models.TextField(null=True, blank=True)
+    parent = models.UUIDField(null=True, blank=True)
+
+    def __str__(self):
+        return self.name

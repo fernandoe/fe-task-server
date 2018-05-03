@@ -10,6 +10,12 @@ class TestTaskModelSerializer(TestCase):
             'description': 'some object description'
         }
 
+    def test_data(self):
+        serializer = TaskSerializer(data=self.serializer_data)
+        serializer.is_valid()
+        data = serializer.data
+        assert set(data.keys()) == set(['name', 'parent', 'description'])
+
     def test_is_valid(self):
         serializer = TaskSerializer(data=self.serializer_data)
         assert serializer.is_valid()
