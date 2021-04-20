@@ -19,7 +19,7 @@ Faker==0.8.13
 idna==2.6
 more-itertools==4.1.0
 pluggy==0.6.0
-py==1.5.3
+py==1.10.0
 PyJWT==1.6.1
 python-dateutil==2.7.2
 pytz==2018.4
